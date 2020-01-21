@@ -41,10 +41,10 @@ public class TouchMovement : MonoBehaviour
 				if (t.phase == TouchPhase.Began) 
 				{ 
 					//画面上のどこをタッチしたかによって左右フリッパーの動きを変える
-					if (t.position.x >= 375 && tag == "RightFripperTag") {
+					if (t.position.x >= Screen.width /2 && tag == "RightFripperTag") {
 						SetAngle (this.flickAngle);
 						Debug.Log (t.position.x);
-					} else if (t.position.x <= 375 && tag == "LeftFripperTag") {
+					} else if (t.position.x <= Screen.width /2 && tag == "LeftFripperTag") {
 						SetAngle (this.flickAngle);
 					}
 					Debug.Log (t.position.x);
